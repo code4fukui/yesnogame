@@ -1,0 +1,24 @@
+<script type="module">
+import { confirm, alert } from "https://js.sabae.cc/dialog.js";
+
+onload = async () => {
+  if (await confirm("旅行は好きですか？")) {
+    await alert("私も好きです！");
+  }
+  const fukuiflg = await confirm("福井県、行ったことますか？");
+  await alert("そろそろ越前がに、解禁です。");
+  if (fukuiflg) {
+    await alert("初の福井旅行におすすめです！");
+  }
+  await alert("越前がにロボコンも合わせてどうぞ！");
+  if (await confirm("越前がにロボコンのウェブサイトを見ますか？")) {
+    document.location = "https://kani-robocon.com";
+    return;
+  }
+  if (await confirm("越前がにのまち、越前町のウェブサイトを見ますか？")) {
+    document.location = "https://www.town-echizen.jp/about/feature.php?id=1";
+    return;
+  }
+  await alert("またのお越しをお待ちしてます！");
+};
+</script>
